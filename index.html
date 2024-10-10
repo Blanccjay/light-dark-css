@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox">
+        <div></div>
+    </label>
+
+    <section>
+        <nav>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Menu</a>
+            <a href="">Explore</a>
+        </nav>
+
+        <div>
+            <div>
+                <h1>Experience the Pure Delight of Fresh Salmon Sashimi</h1>
+                <p>Crafted with the finest cuts of sustainably sourced salmon, our sashimi brings the perfect balance of flavor and texture straight from the ocean to your plate.</p>
+                <button>Explore</button>
+            </div>
+
+            <article>
+                <div class="solid_bg"></div>
+                <img src="./assets/images/sashimi.avif" alt="">
+            </article>
+        </div>
+    </section>
+
+    <audio controls autoplay>
+        <source src="./assets/lee.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        document.querySelector('button').addEventListener('click', function () {
+            const audio = document.querySelector('audio');
+            audio.muted = false; // Unmute the audio
+            audio.play().catch(function (error) {
+                console.log("Audio playback failed:", error); // Catch any errors
+            });
+        });
+    </script>
+</body>
+</html>
